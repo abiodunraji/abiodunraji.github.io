@@ -1,16 +1,31 @@
 ---
+import { existsSync } from "node:fs";
 import Base from "../layouts/Base.astro";
 import Monogram from "../components/Monogram.astro";
 import cv from "../data/cv.json";
 
 const emailSet = !!cv.contact.email && !cv.contact.email.startsWith("TODO");
 const contactHref = emailSet ? `mailto:${cv.contact.email}` : "/contact";
+// Show the real headshot only when the file is actually present (checked at
+// build); otherwise fall back to the monogram — never a broken image.
+const hasPhoto = !!cv.photo && cv.photo.startsWith("/") && existsSync(`public${cv.photo}`);
+const linkedinSet = !!cv.contact.linkedin && !cv.contact.linkedin.startsWith("TODO");
 ---
 
 <Base title="About" description={cv.summary.slice(0, 150)}>
   <section class="mx-auto max-w-3xl px-6 pt-20 pb-10">
     <div class="reveal flex items-center gap-5">
-      <Monogram size={88} />
+      {hasPhoto ? (
+        <img
+          src={cv.photo}
+          alt={cv.brand}
+          width="88"
+          height="88"
+          class="h-[88px] w-[88px] rounded-full object-cover ring-1 ring-[var(--color-line)]"
+        />
+      ) : (
+        <Monogram size={88} />
+      )}
       <div>
         <h1 class="text-4xl font-bold sm:text-5xl">About</h1>
         <p class="mt-1 text-[var(--color-muted)]">{cv.title} · {cv.location}</p>
@@ -34,6 +49,14 @@ const contactHref = emailSet ? `mailto:${cv.contact.email}` : "/contact";
       >
         GitHub
       </a>
+      {linkedinSet && (
+        <a
+          href={cv.contact.linkedin}
+          class="rounded-full border border-[var(--color-line)] px-5 py-2.5 text-sm font-medium text-[var(--color-ink)] transition-colors hover:border-[var(--color-ink)]"
+        >
+          LinkedIn
+        </a>
+      )}
     </div>
   </section>
 </Base>

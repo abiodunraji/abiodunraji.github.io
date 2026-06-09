@@ -1,0 +1,120 @@
+---
+// Standalone, print-optimized CV. Rendered to /cv.pdf via Playwright (see
+// scripts/render-cv) and linked as "Download CV". Uses the FULL legal name
+// in the header (employers verify against ID) with the brand in parentheses.
+// noindex — this is the print source, not a site page.
+import cv from "../data/cv.json";
+import projects from "../data/projects.json";
+
+const emailSet = !!cv.contact.email && !cv.contact.email.startsWith("TODO");
+const contactBits = [
+  emailSet ? cv.contact.email : null,
+  cv.contact.website.replace("https://", ""),
+  cv.contact.github.replace("https://", ""),
+  cv.location,
+].filter(Boolean);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>{cv.fullName} — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0b1020;
+        --body: #1f2937;
+        --muted: #6b7280;
+        --line: #e2e2dd;
+        --accent: #4338ca;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        color: var(--body);
+        font-size: 10.5pt;
+        line-height: 1.5;
+      }
+      .page { max-width: 760px; margin: 0 auto; padding: 40px 44px; }
+      h1, h2, h3 { font-family: "Space Grotesk", sans-serif; color: var(--ink); margin: 0; letter-spacing: -0.01em; }
+      .name { font-size: 26pt; line-height: 1.05; }
+      .brand { color: var(--muted); font-weight: 500; font-size: 12pt; }
+      .role { color: var(--accent); font-weight: 600; margin-top: 4px; }
+      .contact { color: var(--muted); font-size: 9.5pt; margin-top: 8px; }
+      .contact span + span::before { content: "·"; margin: 0 8px; color: var(--line); }
+      section { margin-top: 22px; }
+      .label {
+        font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.12em;
+        color: var(--muted); border-bottom: 1px solid var(--line);
+        padding-bottom: 4px; margin-bottom: 10px;
+      }
+      .summary { margin: 0; }
+      .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; }
+      .skills .row { display: flex; gap: 8px; }
+      .skills .k { color: var(--ink); font-weight: 600; min-width: 86px; }
+      .proj { margin-bottom: 12px; }
+      .proj-head { display: flex; justify-content: space-between; align-items: baseline; }
+      .proj-name { font-size: 11.5pt; font-weight: 700; }
+      .proj-meta { color: var(--muted); font-size: 9pt; }
+      .proj-role { color: var(--accent); font-weight: 600; font-size: 9.5pt; }
+      .proj-tag { margin: 2px 0; }
+      .proj-stack { color: var(--muted); font-size: 9pt; margin-top: 2px; }
+      ul { margin: 4px 0 0; padding-left: 16px; }
+      li { margin-bottom: 2px; }
+      @page { size: A4; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <h1 class="name">{cv.fullName} <span class="brand">({cv.brand})</span></h1>
+        <p class="role">{cv.title}</p>
+        <p class="contact">{contactBits.map((b) => <span>{b}</span>)}</p>
+      </header>
+
+      <section>
+        <div class="label">Summary</div>
+        <p class="summary">{cv.summary}</p>
+      </section>
+
+      <section>
+        <div class="label">Skills</div>
+        <div class="skills">
+          {cv.skills.map((g) => (
+            <div class="row">
+              <span class="k">{g.group}</span>
+              <span>{g.items.join(", ")}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section>
+        <div class="label">Selected projects</div>
+        {projects.map((p) => (
+          <div class="proj">
+            <div class="proj-head">
+              <span class="proj-name">{p.name}</span>
+              <span class="proj-meta">{p.year}</span>
+            </div>
+            <div class="proj-role">{p.role}</div>
+            <p class="proj-tag">{p.tagline}</p>
+            <ul>
+              {p.highlights.slice(0, 2).map((h) => <li>{h}</li>)}
+            </ul>
+            <p class="proj-stack">{p.stack.join(" · ")}</p>
+          </div>
+        ))}
+      </section>
+    </div>
+  </body>
+</html>

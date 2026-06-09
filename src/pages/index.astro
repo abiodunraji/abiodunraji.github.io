@@ -1,0 +1,90 @@
+---
+import Base from "../layouts/Base.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import cv from "../data/cv.json";
+import projects from "../data/projects.json";
+
+const featured = projects.filter((p) => p.featured);
+const emailSet = !!cv.contact.email && !cv.contact.email.startsWith("TODO");
+const contactHref = emailSet ? `mailto:${cv.contact.email}` : "/contact";
+---
+
+<Base>
+  {/* Hero */}
+  <section class="relative mx-auto max-w-5xl px-6 pt-20 pb-16 sm:pt-28">
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute -top-28 left-1/2 -z-10 h-[420px] w-[760px] -translate-x-1/2 rounded-full opacity-[0.08] blur-3xl"
+      style="background: radial-gradient(circle, var(--color-accent), transparent 70%)"
+    >
+    </div>
+
+    <p class="reveal inline-flex items-center gap-2 rounded-full border border-[var(--color-line)] bg-white px-3 py-1 text-xs font-medium text-[var(--color-body)]">
+      <span class="pulse-dot h-2 w-2 rounded-full bg-emerald-500"></span>
+      Available for work
+    </p>
+
+    <p class="reveal mt-6 text-sm font-medium uppercase tracking-[0.18em] text-[var(--color-muted)]" data-d="1">
+      {cv.title} · {cv.location}
+    </p>
+    <h1 class="reveal mt-3 text-5xl font-bold leading-[1.05] sm:text-7xl" data-d="1">{cv.brand}</h1>
+    <p class="reveal mt-6 max-w-2xl text-lg text-[var(--color-body)] sm:text-xl" data-d="2">{cv.tagline}</p>
+
+    <div class="reveal mt-8 flex flex-wrap items-center gap-3" data-d="2">
+      <a
+        href="/work"
+        class="rounded-full bg-[var(--color-accent)] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-hover)]"
+      >
+        View work
+      </a>
+      <a
+        href="/cv.pdf"
+        class="rounded-full border border-[var(--color-line)] px-5 py-2.5 text-sm font-medium text-[var(--color-ink)] transition-colors hover:border-[var(--color-ink)]"
+      >
+        Download CV
+      </a>
+      <a
+        href={contactHref}
+        class="rounded-full px-5 py-2.5 text-sm font-medium text-[var(--color-accent)] transition-colors hover:text-[var(--color-accent-hover)]"
+      >
+        Get in touch →
+      </a>
+    </div>
+
+    <p class="reveal mt-6 text-sm text-[var(--color-muted)]" data-d="3">{cv.available}</p>
+  </section>
+
+  {/* Featured work */}
+  <section class="mx-auto max-w-5xl px-6">
+    <div class="reveal flex items-end justify-between border-b border-[var(--color-line)] pb-4">
+      <h2 class="text-2xl font-bold">Selected work</h2>
+      <a href="/work" class="text-sm text-[var(--color-accent)] hover:text-[var(--color-accent-hover)]">All projects →</a>
+    </div>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2">
+      {featured.map((project) => (
+        <div class="reveal">
+          <ProjectCard project={project} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  {/* Skills */}
+  <section class="mx-auto max-w-5xl px-6 pt-20">
+    <h2 class="reveal text-2xl font-bold">What I work with</h2>
+    <div class="reveal mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        cv.skills.map((group) => (
+          <div>
+            <h3 class="text-sm font-semibold uppercase tracking-wide text-[var(--color-muted)]">{group.group}</h3>
+            <ul class="mt-3 flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <li class="rounded-lg bg-white border border-[var(--color-line)] px-3 py-1.5 text-sm">{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+</Base>

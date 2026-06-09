@@ -1,0 +1,134 @@
+---
+import "../styles/global.css";
+import cv from "../data/cv.json";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const pageTitle = title ? `${title} · ${cv.brand}` : `${cv.brand} — ${cv.title}`;
+const pageDesc = description ?? cv.tagline;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+
+// Person structured data — links the brand name to the full legal name so
+// search engines (and recruiters) resolve all variants to one identity.
+const [givenName, ...rest] = cv.fullName.split(" ");
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: cv.brand,
+  alternateName: [cv.fullName, cv.knownAs],
+  givenName,
+  familyName: rest.join(" "),
+  jobTitle: cv.title,
+  url: cv.contact.website,
+  sameAs: [cv.contact.github, cv.contact.linkedin].filter((u) => u && !u.startsWith("TODO")),
+};
+
+const nav = [
+  { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
+const path = Astro.url.pathname;
+
+// A field is "set" only when it has a value that isn't a TODO placeholder.
+// Used everywhere so unfilled contact details degrade gracefully instead of
+// rendering broken mailto:TODO@… links.
+const emailSet = !!cv.contact.email && !cv.contact.email.startsWith("TODO");
+const linkedinSet = !!cv.contact.linkedin && !cv.contact.linkedin.startsWith("TODO");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {/* Mark JS as available before paint so reveal's hidden state only
+        applies when JS can un-hide it (no-JS users see all content). */}
+    <script is:inline>document.documentElement.classList.add("js");</script>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDesc} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDesc} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="application/ld+json" set:html={JSON.stringify(personLd)} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <header class="sticky top-0 z-50 border-b border-[var(--color-line)] bg-[var(--color-paper)]/85 backdrop-blur">
+      <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+        <a href="/" class="font-[var(--font-display)] text-lg font-bold tracking-tight text-[var(--color-ink)]">
+          {cv.brand}
+        </a>
+        <div class="flex items-center gap-6 text-sm">
+          {
+            nav.map((item) => (
+              <a
+                href={item.href}
+                class:list={[
+                  "transition-colors hover:text-[var(--color-ink)]",
+                  path === item.href ? "text-[var(--color-ink)] font-medium" : "text-[var(--color-muted)]",
+                ]}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t border-[var(--color-line)] mt-24">
+      <div class="mx-auto flex max-w-5xl flex-col gap-2 px-6 py-10 text-sm text-[var(--color-muted)] sm:flex-row sm:items-center sm:justify-between">
+        <p>© {new Date().getFullYear()} {cv.fullName}</p>
+        <div class="flex gap-5">
+          <a class="hover:text-[var(--color-ink)]" href={cv.contact.github}>GitHub</a>
+          {linkedinSet && (
+            <a class="hover:text-[var(--color-ink)]" href={cv.contact.linkedin}>LinkedIn</a>
+          )}
+          {emailSet && (
+            <a class="hover:text-[var(--color-ink)]" href={`mailto:${cv.contact.email}`}>Email</a>
+          )}
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Reveal-on-scroll. If the user prefers reduced motion, show everything
+      // immediately and skip the observer entirely.
+      const els = () => document.querySelectorAll<HTMLElement>(".reveal");
+      if (window.matchMedia("(prefers-reduced-motion: no-preference)").matches) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries) {
+              if (e.isIntersecting) {
+                e.target.classList.add("is-visible");
+                io.unobserve(e.target);
+              }
+            }
+          },
+          { threshold: 0.12 }
+        );
+        els().forEach((el) => io.observe(el));
+      } else {
+        els().forEach((el) => el.classList.add("is-visible"));
+      }
+    </script>
+  </body>
+</html>

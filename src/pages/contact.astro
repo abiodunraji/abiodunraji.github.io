@@ -1,0 +1,37 @@
+---
+import Base from "../layouts/Base.astro";
+import cv from "../data/cv.json";
+
+const links = [
+  { label: "Email", value: cv.contact.email, href: `mailto:${cv.contact.email}` },
+  { label: "GitHub", value: cv.contact.github.replace("https://", ""), href: cv.contact.github },
+  { label: "LinkedIn", value: cv.contact.linkedin, href: cv.contact.linkedin },
+].filter((l) => l.value && !l.value.startsWith("TODO"));
+
+const emailSet = !!cv.contact.email && !cv.contact.email.startsWith("TODO");
+---
+
+<Base title="Contact" description="Get in touch with Biodun Raji.">
+  <section class="mx-auto max-w-3xl px-6 pt-20 pb-10">
+    <h1 class="text-4xl font-bold sm:text-5xl">Let's talk</h1>
+    <p class="mt-6 text-lg text-[var(--color-body)]">
+      Building something ambitious, or hiring for a team that ships?
+      {emailSet ? "The fastest way to reach me is email." : "Reach me on GitHub for now — a direct email address is on the way."}
+    </p>
+
+    <dl class="mt-10 divide-y divide-[var(--color-line)] border-y border-[var(--color-line)]">
+      {
+        links.map((l) => (
+          <div class="flex items-center justify-between py-4">
+            <dt class="text-sm uppercase tracking-wide text-[var(--color-muted)]">{l.label}</dt>
+            <dd>
+              <a class="font-medium text-[var(--color-ink)] hover:text-[var(--color-accent)]" href={l.href}>
+                {l.value}
+              </a>
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+</Base>

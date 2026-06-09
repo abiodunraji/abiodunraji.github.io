@@ -1,0 +1,39 @@
+---
+import Base from "../layouts/Base.astro";
+import Monogram from "../components/Monogram.astro";
+import cv from "../data/cv.json";
+
+const emailSet = !!cv.contact.email && !cv.contact.email.startsWith("TODO");
+const contactHref = emailSet ? `mailto:${cv.contact.email}` : "/contact";
+---
+
+<Base title="About" description={cv.summary.slice(0, 150)}>
+  <section class="mx-auto max-w-3xl px-6 pt-20 pb-10">
+    <div class="reveal flex items-center gap-5">
+      <Monogram size={88} />
+      <div>
+        <h1 class="text-4xl font-bold sm:text-5xl">About</h1>
+        <p class="mt-1 text-[var(--color-muted)]">{cv.title} · {cv.location}</p>
+      </div>
+    </div>
+    <p class="reveal mt-8 text-lg leading-relaxed text-[var(--color-body)]" data-d="1">
+      I'm <strong>{cv.fullName}</strong> — known as {cv.knownAs}. {cv.summary}
+    </p>
+    <p class="reveal mt-6 text-lg leading-relaxed text-[var(--color-body)]" data-d="2">{cv.available}</p>
+
+    <div class="reveal mt-10 flex flex-wrap gap-3" data-d="3">
+      <a
+        href={contactHref}
+        class="rounded-full bg-[var(--color-accent)] px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[var(--color-accent-hover)]"
+      >
+        Get in touch
+      </a>
+      <a
+        href={cv.contact.github}
+        class="rounded-full border border-[var(--color-line)] px-5 py-2.5 text-sm font-medium text-[var(--color-ink)] transition-colors hover:border-[var(--color-ink)]"
+      >
+        GitHub
+      </a>
+    </div>
+  </section>
+</Base>

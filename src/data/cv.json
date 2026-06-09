@@ -1,0 +1,39 @@
+{
+  "brand": "Biodun Raji",
+  "fullName": "Abiodun Osagie-Raji",
+  "knownAs": "Biodun",
+  "title": "Full-stack Engineer",
+  "tagline": "I design and ship real, multi-stack products — web, mobile, and AI.",
+  "location": "Lagos, Nigeria",
+  "summary": "Full-stack engineer who takes products from a blank repo to something people actually use. I work across the stack — Next.js, React, NestJS, Astro, Vue, Python/FastAPI — on top of Postgres, Supabase, Docker and CI, and I'm comfortable owning the parts most engineers hand off: data modelling, auth and row-level security, payments, e2e testing, and shipping to production. Recent work spans a healthcare-professional marketplace, a hyperlocal social app, an AI novel-generation pipeline, and commercial websites.",
+  "available": "Open to senior full-stack / product engineering roles at ambitious companies worldwide — fully remote, or relocation with visa sponsorship (US / UK / EU / Canada).",
+  "contact": {
+    "email": "TODO@biodunraji.com",
+    "github": "https://github.com/abiodunraji",
+    "linkedin": "TODO — your LinkedIn URL",
+    "website": "https://biodunraji.com"
+  },
+  "photo": "TODO — drop a professional photo at public/biodun.jpg",
+  "skills": [
+    {
+      "group": "Languages",
+      "items": ["TypeScript", "JavaScript", "Python", "SQL"]
+    },
+    {
+      "group": "Frontend",
+      "items": ["React", "Next.js", "Astro", "Vue 3", "Tailwind CSS", "React Native / Expo"]
+    },
+    {
+      "group": "Backend",
+      "items": ["Node.js", "NestJS", "FastAPI", "REST APIs", "Prisma"]
+    },
+    {
+      "group": "Data & infra",
+      "items": ["PostgreSQL", "Supabase (RLS)", "Neo4j", "Redis", "Docker", "GitHub Actions CI"]
+    },
+    {
+      "group": "Quality & AI",
+      "items": ["Playwright (E2E)", "Test-first / AI-TDD", "LLM pipelines", "Multi-agent systems", "Observability (Sentry/Grafana)"]
+    }
+  ]
+}

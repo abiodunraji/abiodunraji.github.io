@@ -1,0 +1,18 @@
+---
+// A brand monogram used as the photo placeholder until a real headshot is
+// supplied (drop it at public/biodun.jpg and swap this for an <img>).
+interface Props {
+  size?: number;
+}
+const { size = 96 } = Astro.props;
+---
+
+<div
+  class="grid shrink-0 place-items-center rounded-2xl bg-[var(--color-ink)] text-white"
+  style={`width:${size}px;height:${size}px`}
+  aria-hidden="true"
+>
+  <span class="font-bold leading-none" style={`font-family:var(--font-display);font-size:${Math.round(size * 0.4)}px`}>
+    BR
+  </span>
+</div>

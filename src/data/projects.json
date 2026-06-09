@@ -1,0 +1,81 @@
+[
+  {
+    "slug": "healthbrew",
+    "name": "HealthBrew",
+    "tagline": "A marketplace platform for healthcare professionals.",
+    "role": "Founder & Lead Engineer",
+    "year": "2025–present",
+    "featured": true,
+    "stack": ["Next.js", "Node", "Prisma", "PostgreSQL", "Docker Compose", "Playwright"],
+    "highlights": [
+      "Built the full platform end-to-end: admin, backend API, and data layer.",
+      "Designed HCP verification (license-number handling, role-upgrade review) with privacy-safe user exposure helpers.",
+      "Hardened with a full Playwright e2e suite running on a self-hosted CI runner."
+    ],
+    "url": "TODO — live URL or 'private'",
+    "confidential": false
+  },
+  {
+    "slug": "marcplaats",
+    "name": "Marcplaats",
+    "tagline": "A hyperlocal photo-spotting app for a single city, built test-first.",
+    "role": "Full-stack Engineer",
+    "year": "2026",
+    "featured": true,
+    "stack": ["Next.js 15", "Supabase", "Leaflet", "PWA", "Playwright", "PostgreSQL"],
+    "highlights": [
+      "Every business rule enforced at the database — RLS policies, triggers (rate limits, new-user delay), and CHECK constraints (geofencing to one city).",
+      "GPS-first upload flow with an Alkmaar-constrained manual map-pin fallback and platform-aware permission recovery.",
+      "Shipped via strict AI-TDD: a failing Playwright behaviour test before every feature."
+    ],
+    "url": "https://marcplaats.com",
+    "confidential": false
+  },
+  {
+    "slug": "dreamy",
+    "name": "Dreamy AI",
+    "tagline": "A multi-agent platform that generates full-length novels from a concept.",
+    "role": "Engineer",
+    "year": "2025–2026",
+    "featured": true,
+    "stack": ["FastAPI", "Vue 3", "PostgreSQL", "Neo4j", "Redis", "Celery", "LLM pipeline"],
+    "highlights": [
+      "7-agent generation pipeline (concept → knowledge graph → blueprint → write → critique → polish) producing 80k+ word books.",
+      "Story continuity backed by a Neo4j knowledge graph; a multi-critic/reviser quality system with ML quality prediction.",
+      "Full observability stack (Prometheus, Grafana, Sentry) across a containerised, multi-service deployment."
+    ],
+    "url": "TODO — private / demo",
+    "confidential": false
+  },
+  {
+    "slug": "house-of-faridah",
+    "name": "House of Faridah",
+    "tagline": "A multi-brand site for an interior-design & construction company, with its own CMS.",
+    "role": "Engineer",
+    "year": "2025",
+    "featured": true,
+    "stack": ["React", "Vite", "TypeScript", "Radix UI", "Tailwind", "Framer Motion"],
+    "highlights": [
+      "Two sub-brands (Interiors + Construction) in one app, plus an admin portal and a content-managed portfolio system.",
+      "Image galleries with watermarking, lightbox, and a copy-paste 'add a project' workflow for the client.",
+      "Designed from Figma, deployed on GitHub Pages."
+    ],
+    "url": "TODO — live URL",
+    "confidential": false
+  },
+  {
+    "slug": "ajoko",
+    "name": "Ajoko",
+    "tagline": "A ROSCA (rotating savings) fintech app across web and mobile.",
+    "role": "Engineer",
+    "year": "2025–2026",
+    "featured": false,
+    "stack": ["NestJS", "React", "React Native / Expo", "PostgreSQL", "Redis"],
+    "highlights": [
+      "Full-stack fintech: backend (NestJS/Prisma), web, admin, and a mobile client.",
+      "Auth, payments, and the dual UX/security failure-mode discipline that fintech demands."
+    ],
+    "url": "TODO",
+    "confidential": false
+  }
+]

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* Design tokens — Tailwind v4 @theme. A confident, restrained palette:
+   near-black ink, warm white, one indigo accent used sparingly. */
+@theme {
+  --color-ink: #0b1020;
+  --color-body: #1f2937;
+  --color-muted: #6b7280;
+  --color-line: #e7e7e4;
+  --color-paper: #fbfbf9;
+  --color-accent: #4338ca;
+  --color-accent-hover: #3730a3;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+  letter-spacing: -0.02em;
+}
+
+/* Scroll-reveal — progressive enhancement. The hidden initial state is
+   gated under `.js` (added by an inline head script), so without JS all
+   content is visible by default. Disabled under prefers-reduced-motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s cubic-bezier(0.2, 0.6, 0.2, 1),
+      transform 0.7s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+  .js .reveal[data-d="1"] { transition-delay: 0.08s; }
+  .js .reveal[data-d="2"] { transition-delay: 0.16s; }
+  .js .reveal[data-d="3"] { transition-delay: 0.24s; }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .pulse-dot { animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+}

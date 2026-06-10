@@ -14,6 +14,18 @@
     "website": "https://abiodunraji.github.io"
   },
   "photo": "/biodun.png",
+  "education": [
+    {
+      "name": "Diploma — Folu Computer Academy",
+      "detail": "Formal computing diploma that launched a tech career; in the industry ever since — in-house roles at several businesses, then full-time freelance, project-based engineering.",
+      "year": "2007–2010"
+    },
+    {
+      "name": "Self-taught, production-first",
+      "detail": "Modern stack (TypeScript, React/Next.js, Node/NestJS, Python/FastAPI, Postgres/Supabase, Docker, CI/CD, Playwright e2e) learned by shipping real products — see Selected projects.",
+      "year": "2010–present"
+    }
+  ],
   "skills": [
     {
       "group": "Languages",

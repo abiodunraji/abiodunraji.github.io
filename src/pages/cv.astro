@@ -98,6 +98,21 @@ const contactBits = [
         </div>
       </section>
 
+      {cv.education?.length > 0 && (
+        <section>
+          <div class="label">Education & training</div>
+          {cv.education.map((e) => (
+            <div class="proj">
+              <div class="proj-head">
+                <span class="proj-name" style="font-size: 10.5pt">{e.name}</span>
+                <span class="proj-meta">{e.year}</span>
+              </div>
+              {e.detail && <p class="proj-tag">{e.detail}</p>}
+            </div>
+          ))}
+        </section>
+      )}
+
       <section>
         <div class="label">Selected projects</div>
         {projects.map((p) => (

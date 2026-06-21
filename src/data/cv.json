@@ -9,7 +9,7 @@
   "available": "Available for new projects — and open to senior full-stack / product roles. Fully remote, worldwide.",
   "studio": {
     "headline": "I build and ship your product — fast, and built to last.",
-    "pitch": "A one-person product studio. I take ideas to production-grade apps in weeks, not months — with what most freelancers skip: real test coverage, monitoring, and security built in from day one. Senior-engineer output, no agency overhead.",
+    "pitch": "A product studio for shipping real software. I take ideas to production-grade apps in weeks, not months — with what most freelancers skip: real test coverage, monitoring, and security built in from day one. Senior-engineer output, no agency overhead.",
     "ctaLabel": "Start a project",
     "offers": [
       { "title": "MVP Sprint", "desc": "Your idea to a live, working product — data model, API, UI, deploy, and e2e tests.", "timeline": "2–4 weeks" },

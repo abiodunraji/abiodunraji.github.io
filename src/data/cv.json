@@ -6,7 +6,17 @@
   "tagline": "I design and ship real, multi-stack products — web, mobile, and AI.",
   "location": "Lagos, Nigeria",
   "summary": "Full-stack engineer who takes products from a blank repo to something people actually use. I work across the stack — Next.js, React, NestJS, Astro, Vue, Python/FastAPI — on top of Postgres, Supabase, Docker and CI, and I'm comfortable owning the parts most engineers hand off: data modelling, auth and row-level security, payments, e2e testing, and shipping to production. Recent work spans a healthcare-professional marketplace, a hyperlocal social app, an AI novel-generation pipeline, and commercial websites.",
-  "available": "Open to senior full-stack / product engineering roles at ambitious companies worldwide — fully remote, or relocation with visa sponsorship (US / UK / EU / Canada).",
+  "available": "Available for new projects — and open to senior full-stack / product roles. Fully remote, worldwide.",
+  "studio": {
+    "headline": "I build and ship your product — fast, and built to last.",
+    "pitch": "A one-person product studio. I take ideas to production-grade apps in weeks, not months — with what most freelancers skip: real test coverage, monitoring, and security built in from day one. Senior-engineer output, no agency overhead.",
+    "ctaLabel": "Start a project",
+    "offers": [
+      { "title": "MVP Sprint", "desc": "Your idea to a live, working product — data model, API, UI, deploy, and e2e tests.", "timeline": "2–4 weeks" },
+      { "title": "Production Hardening", "desc": "Make an existing app safe to scale: row-level security, DB constraints, an e2e suite, error monitoring, CI.", "timeline": "1–2 weeks" },
+      { "title": "AI & Automation", "desc": "A working LLM feature or agent pipeline in your product — done properly, with observability.", "timeline": "1–3 weeks" }
+    ]
+  },
   "contact": {
     "email": "raji.osagie.abiodun@gmail.com",
     "github": "https://github.com/abiodunraji",

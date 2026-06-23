@@ -60,7 +60,7 @@
       "Image galleries with watermarking, lightbox, and a copy-paste 'add a project' workflow for the client.",
       "Designed from Figma, deployed on GitHub Pages."
     ],
-    "url": "TODO — live URL",
+    "url": "https://houseoffaridah.com",
     "confidential": false
   },
   {
@@ -75,7 +75,7 @@
       "Full-stack fintech: backend (NestJS/Prisma), web, admin, and a mobile client.",
       "Auth, payments, and the dual UX/security failure-mode discipline that fintech demands."
     ],
-    "url": "TODO",
+    "url": "https://ajoko.ng",
     "confidential": false
   }
 ]

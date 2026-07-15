@@ -20,13 +20,20 @@ if (!chromium) {
   process.exit(1);
 }
 
+// Optional args let one script render every variant:
+//   node scripts/render-cv.mjs                         → /cv        → public/cv.pdf
+//   node scripts/render-cv.mjs /cv-python cv-python.pdf → /cv-python → public/cv-python.pdf
+const route = process.argv[2] || '/cv';
+const outArg = process.argv[3] || 'cv.pdf';
+const out = outArg.startsWith('public/') ? outArg : `public/${outArg}`;
+
 const browser = await chromium.launch();
 const page = await browser.newPage();
-await page.goto('http://localhost:4399/cv', { waitUntil: 'networkidle' });
+await page.goto(`http://localhost:4399${route}`, { waitUntil: 'networkidle' });
 await page.pdf({
-  path: 'public/cv.pdf',
+  path: out,
   format: 'A4',
   printBackground: true,
 });
 await browser.close();
-console.log('public/cv.pdf written');
+console.log(`${out} written`);

@@ -1,0 +1,61 @@
+{
+  "brand": "Biodun Raji",
+  "fullName": "Abiodun Osagie-Raji",
+  "knownAs": "Biodun",
+  "title": "Full-Stack Engineer · Python / FastAPI / AI",
+  "tagline": "I design and ship real, multi-stack products — web, mobile, and AI.",
+  "location": "Lagos, Nigeria",
+  "summary": "Full-stack engineer with a Python core — I take products from a blank repo to production. My recent focus is Python/FastAPI backends and LLM systems: Dreamy AI is a 7-agent generation pipeline on FastAPI, PostgreSQL, Neo4j and Redis, with Prometheus/Grafana/Sentry observability across containerised services. Around that I own the full stack — React/Vue front-ends, data modelling, auth and row-level security, Docker, CI/CD, and Playwright e2e tests from day one. Prior work spans fintech (NestJS, payments), a healthcare-professional marketplace, and a hyperlocal social app.",
+  "available": "Available for new projects — and open to senior Python / full-stack roles. Fully remote, worldwide, or hybrid.",
+  "studio": {
+    "headline": "I build and ship your product — fast, and built to last.",
+    "pitch": "Independent product studio — senior engineering, end to end. I take ideas to production-grade apps in weeks, not months — with what most freelancers skip: real test coverage, monitoring, and security built in from day one. No agency overhead.",
+    "ctaLabel": "Start a project",
+    "offers": [
+      { "title": "MVP Sprint", "desc": "Your idea to a live, working product — data model, API, UI, deploy, and e2e tests.", "timeline": "2–4 weeks" },
+      { "title": "Production Hardening", "desc": "Make an existing app safe to scale: row-level security, DB constraints, an e2e suite, error monitoring, CI.", "timeline": "1–2 weeks" },
+      { "title": "AI & Automation", "desc": "A working LLM feature or agent pipeline in your product — done properly, with observability.", "timeline": "1–3 weeks" }
+    ]
+  },
+  "contact": {
+    "email": "raji.osagie.abiodun@gmail.com",
+    "github": "https://github.com/abiodunraji",
+    "linkedin": "https://www.linkedin.com/in/biodun-raji-219434415/",
+    "website": "https://abiodunraji.github.io"
+  },
+  "photo": "/biodun.png",
+  "education": [
+    {
+      "name": "Diploma — Folu Computer Institute",
+      "detail": "Formal computing diploma that launched a tech career; in the industry ever since — in-house roles at several businesses, then full-time freelance, project-based engineering.",
+      "year": "2007–2010"
+    },
+    {
+      "name": "Self-taught, production-first",
+      "detail": "Modern stack (Python/FastAPI, TypeScript, React/Next.js, Node/NestJS, Postgres/Supabase, Neo4j, Docker, CI/CD, Playwright e2e) learned by shipping real products — see Selected projects.",
+      "year": "2010–present"
+    }
+  ],
+  "skills": [
+    {
+      "group": "Languages",
+      "items": ["Python", "TypeScript", "JavaScript", "SQL"]
+    },
+    {
+      "group": "Backend",
+      "items": ["FastAPI", "NestJS", "Node.js", "REST APIs", "Prisma"]
+    },
+    {
+      "group": "Data & infra",
+      "items": ["PostgreSQL", "Neo4j", "Redis", "Supabase (RLS)", "Docker", "GitHub Actions CI"]
+    },
+    {
+      "group": "Quality & AI",
+      "items": ["LLM pipelines", "Multi-agent systems", "Playwright (E2E)", "Test-first / AI-TDD", "Observability (Sentry/Grafana)"]
+    },
+    {
+      "group": "Frontend",
+      "items": ["React", "Next.js", "Vue 3", "Astro", "Tailwind CSS", "React Native / Expo"]
+    }
+  ]
+}

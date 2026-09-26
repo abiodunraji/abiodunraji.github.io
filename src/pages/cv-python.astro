@@ -1,13 +1,14 @@
 ---
 // Role-tailored print CV for Python / FastAPI / AI roles → rendered to
 // /cv-python.pdf (see scripts/render-cv). Reuses the shared CvDocument template
-// with Python-slanted data (cv.python.json) and a Dreamy-first project order
-// (the FastAPI/LLM flagship leads). The shared projects.json is left untouched.
+// with Python-slanted data (cv.python.json) and its own project order. The
+// shared projects.json is left untouched. Only projects with a real domain are
+// public (the founder's rule, 26 Sep 2026), so the order names only those.
 import cv from "../data/cv.python.json";
 import allProjects from "../data/projects.json";
 import CvDocument from "../components/CvDocument.astro";
 
-const order = ["dreamy", "studio-agents", "ajoko", "healthbrew", "marcplaats"];
+const order = ["ajoko", "marcplaats"];
 const rank = (p) => {
   const i = order.indexOf(p.slug);
   return i === -1 ? order.length : i;

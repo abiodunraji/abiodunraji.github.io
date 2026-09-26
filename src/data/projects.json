@@ -7,7 +7,15 @@
     "delivery": "Live product",
     "year": "2025–present",
     "featured": true,
-    "stack": ["Next.js", "React", "Supabase (RLS)", "PostgreSQL", "Redis", "Vercel", "React Native / Expo"],
+    "stack": [
+      "Next.js",
+      "React",
+      "Supabase (RLS)",
+      "PostgreSQL",
+      "Redis",
+      "Vercel",
+      "React Native / Expo"
+    ],
     "highlights": [
       "Whole member lifecycle, onboarding to disputes; the first real circle completed with zero defaults.",
       "Staff back-office: monitoring, role-based access, support inbox, disputes console, audit log, announcements.",
@@ -25,7 +33,16 @@
     "delivery": "Client project",
     "year": "2026–present",
     "featured": true,
-    "stack": ["Next.js 15", "Supabase", "PostgreSQL", "Leaflet / Mapbox", "PWA (Serwist)", "Playwright", "Sentry", "Vercel"],
+    "stack": [
+      "Next.js 15",
+      "Supabase",
+      "PostgreSQL",
+      "Leaflet / Mapbox",
+      "PWA (Serwist)",
+      "Playwright",
+      "Sentry",
+      "Vercel"
+    ],
     "highlights": [
       "Business rules enforced in the database: row-level security, rate-limit triggers, CHECK constraints.",
       "GPS-first upload with map-pin fallback, Serwist PWA, Sentry; a failing Playwright test before every feature.",
@@ -42,7 +59,14 @@
     "delivery": "Client project",
     "year": "2026",
     "featured": true,
-    "stack": ["Cloudflare Workers", "D1", "R2", "Wrangler", "Google Business Profile", "Search Console"],
+    "stack": [
+      "Cloudflare Workers",
+      "D1",
+      "R2",
+      "Wrangler",
+      "Google Business Profile",
+      "Search Console"
+    ],
     "highlights": [
       "Workers, D1 and R2 store with an owner self-service panel; each WhatsApp tap counted as a conversion.",
       "Verified its Google Business Profile; homepage indexed and 774 pages discovered in Search Console.",
@@ -53,41 +77,6 @@
     "consentPending": true
   },
   {
-    "slug": "webinar-platform",
-    "name": "Webinar and events platform",
-    "tagline": "A Nigeria-first webinar and events platform with paid tickets, built for a client.",
-    "role": "Design & build",
-    "delivery": "Client project",
-    "year": "2026",
-    "featured": true,
-    "stack": ["Next.js 15", "Supabase", "Cloudflare Workers (OpenNext)", "Paystack", "Resend", "Termii", "Web Push"],
-    "highlights": [
-      "Gated join links, Paystack ticketing, reminders by email, push and SMS, host analytics and recurring series.",
-      "Designed its visual system from scratch; security passes took Dependabot alerts from 21 to 0.",
-      "A QR-code flyer feature so hosts can promote an event offline."
-    ],
-    "url": "private",
-    "confidential": false,
-    "consentPending": true
-  },
-  {
-    "slug": "studio-agents",
-    "name": "Studio agents",
-    "tagline": "Agents that run parts of my own studio: one writes code, one watches every live site, one operates a computer.",
-    "role": "Design & build",
-    "delivery": "Studio tooling",
-    "year": "2026",
-    "featured": true,
-    "stack": ["Node.js", "Claude Agent SDK", "WSL sandbox", "GitHub Issues", "Windows automation"],
-    "highlights": [
-      "Coding agent: plans, executes, verifies in a sandbox behind a hard safety gate; a human merges each PR.",
-      "Watchman that checks every live site and files issues; computer-use agent with a coded kill switch.",
-      "The computer-use agent's policy is enforced in code, not in its prompt: kill switch, deny and confirm rules, and a full action journal."
-    ],
-    "url": "private",
-    "confidential": false
-  },
-  {
     "slug": "house-of-faridah",
     "name": "House of Faridah",
     "tagline": "A multi-brand site for a Nigerian interior-design and construction company, with its own CMS.",
@@ -95,7 +84,15 @@
     "delivery": "Client project",
     "year": "2025–present",
     "featured": true,
-    "stack": ["React 18", "Vite", "TypeScript", "Radix UI", "Tailwind CSS", "Framer Motion", "GitHub Pages"],
+    "stack": [
+      "React 18",
+      "Vite",
+      "TypeScript",
+      "Radix UI",
+      "Tailwind CSS",
+      "Framer Motion",
+      "GitHub Pages"
+    ],
     "highlights": [
       "Two sub-brands in one app, an admin portal and a portfolio CMS with galleries and watermarking.",
       "Image weight cut from 61 MB to 8.5 MB; the Interiors page is interactive in 2–9 s, down from 27–90+ s.",
@@ -103,40 +100,6 @@
       "A copy-paste 'add a project' workflow so the client can publish new work."
     ],
     "url": "https://houseoffaridah.com",
-    "confidential": false
-  },
-  {
-    "slug": "healthbrew",
-    "name": "HealthBrew",
-    "tagline": "A marketplace platform for healthcare professionals. Not launched; the code was archived in 2026.",
-    "role": "Co-founder & CTO",
-    "delivery": "Co-founded company",
-    "year": "2024–2026",
-    "featured": false,
-    "stack": ["Next.js", "Node", "Prisma", "PostgreSQL", "Docker Compose", "Playwright"],
-    "highlights": [
-      "Built the whole platform: admin, backend API and data layer, with a Playwright e2e suite on self-hosted CI.",
-      "Designed professional-license verification (about 50 files, 9,800 lines) behind a feature flag.",
-      "Privacy-safe user exposure helpers and a role-upgrade review flow."
-    ],
-    "url": "private",
-    "confidential": false
-  },
-  {
-    "slug": "dreamy",
-    "name": "Dreamy AI",
-    "tagline": "A multi-agent platform that writes full-length novels from a concept. Handed to the client in 2026; on hold.",
-    "role": "Engineer",
-    "delivery": "Client project",
-    "year": "2025–2026",
-    "featured": false,
-    "stack": ["FastAPI", "Vue 3", "PostgreSQL", "Neo4j", "Redis", "Celery", "LLM pipeline"],
-    "highlights": [
-      "7-agent pipeline (concept → graph → blueprint → write → critique → polish) producing 80k+ word books.",
-      "Neo4j knowledge graph for story continuity; a multi-critic/reviser quality system with ML quality prediction.",
-      "Full observability stack (Prometheus, Grafana, Sentry) across a containerised, multi-service deployment."
-    ],
-    "url": "private",
     "confidential": false
   },
   {
@@ -148,7 +111,12 @@
     "year": "2026",
     "featured": false,
     "cvCompact": true,
-    "stack": ["Astro 7", "Tailwind v4", "Cloudflare Pages / Workers", "Google Tag Manager"],
+    "stack": [
+      "Astro 7",
+      "Tailwind v4",
+      "Cloudflare Pages / Workers",
+      "Google Tag Manager"
+    ],
     "highlights": [
       "Three-page Astro and Tailwind site with tag management and Consent Mode v2; the Astro 7 upgrade took 37 Dependabot alerts to 0.",
       "Indexing fixes, a pricing and FAQ page, IndexNow, Search Console and Bing submission, and AI-crawler allow-listing on Cloudflare: 3 of 14 pages indexed on 21 Sep 2026, 11 of 13 on 26 Sep."
@@ -156,23 +124,6 @@
     "url": "private",
     "confidential": false,
     "consentPending": true
-  },
-  {
-    "slug": "ai-visibility-check",
-    "name": "AI Visibility Check",
-    "tagline": "Measures who AI assistants cite for a business, then ships the fixes.",
-    "role": "Design & delivery",
-    "delivery": "Studio service",
-    "year": "2026",
-    "featured": false,
-    "cvCompact": true,
-    "stack": ["Node.js", "Browser automation (CDP)", "Search Console", "Bing Webmaster Tools", "IndexNow"],
-    "highlights": [
-      "Asks ChatGPT, Gemini, Perplexity and Claude a business's own customer questions, through the client's own logged-in AI apps in a real browser, and reports who they cite.",
-      "Delivered round one in full to the first client, a Dutch agency: report, indexing fixes, a pricing and FAQ page, IndexNow, search-engine submission and AI-crawler allow-listing."
-    ],
-    "url": "private",
-    "confidential": false
   },
   {
     "slug": "seo-specialist-site",
@@ -183,7 +134,11 @@
     "year": "2026",
     "featured": false,
     "cvCompact": true,
-    "stack": ["Astro 7", "Tailwind 4", "GitHub Pages"],
+    "stack": [
+      "Astro 7",
+      "Tailwind 4",
+      "GitHub Pages"
+    ],
     "highlights": [
       "Own-domain email with SPF, DKIM and DMARC (mail-tester 10/10), tag management, and the phone number surfaced sitewide.",
       "Astro 5 to 7 security upgrades and build-time sitemap dates."
@@ -201,7 +156,9 @@
     "year": "2026",
     "featured": false,
     "cvCompact": true,
-    "stack": ["Booking Experts CMS"],
+    "stack": [
+      "Booking Experts CMS"
+    ],
     "highlights": [
       "Fixed titles, descriptions and H1s on 20 pages, corrected noindex tags and broken links, linked three orphaned pages, translated six pages to English and added a landing page, all inside the CMS with no code repo.",
       "Reported each round to the client as a flattened PDF status report."
@@ -219,7 +176,9 @@
     "year": "2026",
     "featured": false,
     "cvCompact": true,
-    "stack": ["Shopify (Broadcast theme)"],
+    "stack": [
+      "Shopify (Broadcast theme)"
+    ],
     "highlights": [
       "Theme republish, navigation and dead-link fixes, with checkout and cart verified end to end.",
       "Traced a shop-wide overlay setting that made product cards unreadable; measured contrast went from 1.1:1 to 8.36:1."
@@ -227,93 +186,5 @@
     "url": "private",
     "confidential": false,
     "consentPending": true
-  },
-  {
-    "slug": "physio-directory",
-    "name": "Physio-practice directory (NL)",
-    "tagline": "Proof of concept ranking practices from public map data.",
-    "role": "Data & build",
-    "delivery": "Client project",
-    "year": "2026",
-    "featured": false,
-    "cvCompact": true,
-    "stack": ["Astro 5", "Tailwind 4", "Cloudflare Pages", "Data pipeline"],
-    "highlights": [
-      "Data pipeline from a public Google Maps export: deduplicated and filtered 89 listings down to 50 practices for the first city.",
-      "Trust-first redesign with rank-badge rows, a methodology page and an accessibility pass; kept out of search until the client picks the next cities."
-    ],
-    "url": "private",
-    "confidential": false,
-    "consentPending": true
-  },
-  {
-    "slug": "my-record-label",
-    "name": "My Record Label",
-    "tagline": "Catalogue, royalties and artist portal for labels. Not launched.",
-    "role": "Design & build",
-    "delivery": "Studio product",
-    "year": "2026",
-    "featured": false,
-    "cvCompact": true,
-    "stack": ["Next.js 15", "React 19", "Supabase", "Cloudflare Workers (OpenNext)"],
-    "highlights": [
-      "Distributor-agnostic royalty ingest with deal-aware reconciliation, recoupment and manager commission.",
-      "Artist-scoped catalogue and split sheets (row-level security verified), a fan CRM, smart links and an artist login portal, on its own design system."
-    ],
-    "url": "private",
-    "confidential": false
-  },
-  {
-    "slug": "massage-marketplace",
-    "name": "In-home massage booking marketplace",
-    "tagline": "Two-sided, with an ops console. Not launched.",
-    "role": "Design & build",
-    "delivery": "Product build",
-    "year": "2026",
-    "featured": false,
-    "cvCompact": true,
-    "stack": ["Next.js 15", "Supabase", "PWA"],
-    "highlights": [
-      "The full booking-to-payout lifecycle, with a payment hold and a safety timeline for each session.",
-      "An ops console with a verification queue, dispatch and incident review, and a design system studied against real luxury-hospitality examples."
-    ],
-    "url": "private",
-    "confidential": false,
-    "consentPending": true
-  },
-  {
-    "slug": "news-extension",
-    "name": "News-reading browser extension (MVP)",
-    "tagline": "Highlights how a news article is constructed.",
-    "role": "Build",
-    "delivery": "Client project",
-    "year": "2026",
-    "featured": false,
-    "cvCompact": true,
-    "stack": ["Manifest V3", "JavaScript"],
-    "highlights": [
-      "Detect-only, in plain JavaScript with no LLM and no server: all detection runs in the page.",
-      "MVP demo and packaged extension delivered to the client for testing on real articles."
-    ],
-    "url": "private",
-    "confidential": false,
-    "consentPending": true
-  },
-  {
-    "slug": "betgist",
-    "name": "BetGist",
-    "tagline": "Betting previews, odds comparison and a public record of settled picks.",
-    "role": "Design & build",
-    "delivery": "Studio product",
-    "year": "2026",
-    "featured": false,
-    "cvCompact": true,
-    "stack": ["Astro 7", "Cloudflare Pages"],
-    "highlights": [
-      "Match previews, odds comparison and a public record page that settles every pick; kept out of search until its own domain is registered.",
-      "An internal quantitative model, run as a paper-trading research pipeline."
-    ],
-    "url": "https://betgist.pages.dev",
-    "confidential": false
   }
 ]

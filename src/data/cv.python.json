@@ -2,11 +2,11 @@
   "brand": "Biodun Raji",
   "fullName": "Abiodun Osagie-Raji",
   "knownAs": "Biodun",
-  "title": "Full-Stack Engineer · Python / FastAPI / AI",
-  "tagline": "I design and ship real, multi-stack products — web, mobile, and AI.",
+  "title": "Full-stack Engineer · Python / FastAPI / AI",
+  "tagline": "I build whole systems, end to end — web, mobile, AI agents and the operations around them — in whatever stack the problem needs.",
   "location": "Lagos, Nigeria",
-  "summary": "Full-stack engineer with a Python core — I take products from a blank repo to production. My recent focus is Python/FastAPI backends and LLM systems: Dreamy AI is a 7-agent generation pipeline on FastAPI, PostgreSQL, Neo4j and Redis, with Prometheus/Grafana/Sentry observability across containerised services. Around that I own the full stack — React/Vue front-ends, data modelling, auth and row-level security, Docker, CI/CD, and Playwright e2e tests from day one. Prior work spans fintech (NestJS, payments), a healthcare-professional marketplace, and a hyperlocal social app.",
-  "available": "Available for new projects — and open to senior Python / full-stack roles. Fully remote, worldwide, or hybrid.",
+  "summary": "Full-stack engineer who builds the whole system a problem needs, in whatever stack it needs; this version of my CV leads with Python and AI. My deepest Python work is backend and LLM systems: Dreamy AI is a 7-agent novel-generation pipeline on FastAPI, PostgreSQL, Neo4j, Redis and Celery, with Prometheus, Grafana and Sentry across containerised services. Around that I own the rest: React and Vue front-ends, data modelling, auth and row-level security, Docker, CI/CD, Playwright tests from day one, and AI agents that do real work behind safety gates written in code. I run an independent studio that delivers for clients in Nigeria and the Netherlands, and I co-founded a healthcare-marketplace startup as its CTO. In tech since 2010.",
+  "available": "Taking on studio projects, and open to senior and leadership roles in Python, data and AI, backend, platform and product, and to operations, strategy and delivery work wherever a system can solve the problem. Based in Lagos: on-site or remote, worldwide.",
   "studio": {
     "headline": "I build and ship your product — fast, and built to last.",
     "pitch": "Independent product studio — senior engineering, end to end. I take ideas to production-grade apps in weeks, not months — with what most freelancers skip: real test coverage, monitoring, and security built in from day one. No agency overhead.",
@@ -38,24 +38,28 @@
   ],
   "skills": [
     {
-      "group": "Languages",
-      "items": ["Python", "TypeScript", "JavaScript", "SQL"]
+      "group": "AI & agents",
+      "items": ["Multi-agent pipelines", "LLM features", "Agents behind coded safety gates", "AI-search visibility"]
     },
     {
-      "group": "Backend",
-      "items": ["FastAPI", "NestJS", "Node.js", "REST APIs", "Prisma"]
+      "group": "Backend & data",
+      "items": ["FastAPI", "Celery", "REST APIs", "PostgreSQL", "Neo4j", "Redis", "Supabase (RLS)"]
     },
     {
-      "group": "Data & infra",
-      "items": ["PostgreSQL", "Neo4j", "Redis", "Supabase (RLS)", "Docker", "GitHub Actions CI"]
+      "group": "Operations",
+      "items": ["Docker", "CI/CD", "Observability (Prometheus, Grafana, Sentry)", "Security hardening"]
     },
     {
-      "group": "Quality & AI",
-      "items": ["LLM pipelines", "Multi-agent systems", "Playwright (E2E)", "Test-first / AI-TDD", "Observability (Sentry/Grafana)"]
+      "group": "Products",
+      "items": ["Web and mobile apps", "APIs and data models", "Payments", "Marketplaces", "Storefronts"]
     },
     {
-      "group": "Frontend",
-      "items": ["React", "Next.js", "Vue 3", "Astro", "Tailwind CSS", "React Native / Expo"]
+      "group": "Delivery",
+      "items": ["Test-first", "Playwright end-to-end", "Scoping and fixed-fee pricing", "Written client reports"]
+    },
+    {
+      "group": "Stack so far",
+      "items": ["Python", "FastAPI", "TypeScript", "JavaScript", "SQL", "React / Next.js", "Vue 3", "Astro", "Node.js / NestJS", "PostgreSQL / Supabase", "Neo4j", "Redis", "Cloudflare Workers, D1, R2", "Docker", "React Native / Expo"]
     }
   ]
 }

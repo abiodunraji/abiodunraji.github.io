@@ -2,11 +2,11 @@
   "brand": "Biodun Raji",
   "fullName": "Abiodun Osagie-Raji",
   "knownAs": "Biodun",
-  "title": "Full-stack Engineer",
-  "tagline": "I design and ship real, multi-stack products — web, mobile, and AI.",
+  "title": "Systems Builder & Engineer",
+  "tagline": "I solve problems by building the system that fixes them — software, AI agents and the operations around them — in whatever stack the problem needs.",
   "location": "Lagos, Nigeria",
-  "summary": "Full-stack engineer who takes products from a blank repo to something people actually use. I work across the stack — Next.js, React, NestJS, Astro, Vue, Python/FastAPI — on top of Postgres, Supabase, Docker and CI, and I'm comfortable owning the parts most engineers hand off: data modelling, auth and row-level security, payments, e2e testing, and shipping to production. Recent work spans a healthcare-professional marketplace, a hyperlocal social app, an AI novel-generation pipeline, and commercial websites.",
-  "available": "Available for new projects — and open to senior full-stack / product roles. Fully remote, worldwide.",
+  "summary": "I build the systems that solve a problem, in whatever stack the problem needs. Mostly that is software: web and mobile products, APIs and data models, payments, back-office consoles, and AI agents that do real work behind safety gates written in code. Around it sits the operation: search and AI visibility, store and CMS work, monitoring and process. I run an independent studio for clients in Nigeria and the Netherlands; in 2026 that meant a 733-product retail storefront, a ticketed webinar platform and Dutch site and search work, alongside a live savings-circle product. I also co-founded a healthcare-marketplace startup as its CTO. In tech since 2010.",
+  "available": "Taking on studio projects; open to senior and leadership roles in engineering, architecture, platform, data and AI, security and product, in any stack, and to operations, strategy, transformation and delivery work wherever a system can solve the problem. Based in Lagos: on-site or remote, worldwide.",
   "studio": {
     "headline": "I build and ship your product — fast, and built to last.",
     "pitch": "Independent product studio — senior engineering, end to end. I take ideas to production-grade apps in weeks, not months — with what most freelancers skip: real test coverage, monitoring, and security built in from day one. No agency overhead.",
@@ -38,24 +38,28 @@
   ],
   "skills": [
     {
-      "group": "Languages",
-      "items": ["TypeScript", "JavaScript", "Python", "SQL"]
+      "group": "Products",
+      "items": ["Web and mobile apps", "APIs and data models", "Payments", "Marketplaces", "Storefronts", "CMSs"]
     },
     {
-      "group": "Frontend",
-      "items": ["React", "Next.js", "Astro", "Vue 3", "Tailwind CSS", "React Native / Expo"]
+      "group": "Operations",
+      "items": ["Back-office consoles", "Monitoring", "Process automation", "CI/CD", "Security hardening"]
     },
     {
-      "group": "Backend",
-      "items": ["Node.js", "NestJS", "FastAPI", "REST APIs", "Prisma"]
+      "group": "AI & agents",
+      "items": ["Multi-agent pipelines", "Agents behind coded safety gates", "LLM features", "AI-search visibility"]
     },
     {
-      "group": "Data & infra",
-      "items": ["PostgreSQL", "Supabase (RLS)", "Neo4j", "Redis", "Docker", "GitHub Actions CI"]
+      "group": "Growth",
+      "items": ["Technical SEO", "Search Console", "Google Business Profile", "Shopify", "Conversion tracking"]
     },
     {
-      "group": "Quality & AI",
-      "items": ["Playwright (E2E)", "Test-first / AI-TDD", "LLM pipelines", "Multi-agent systems", "Observability (Sentry/Grafana)"]
+      "group": "Delivery",
+      "items": ["Test-first", "Playwright end-to-end", "Scoping and fixed-fee pricing", "Written client reports"]
+    },
+    {
+      "group": "Stack so far",
+      "items": ["TypeScript", "JavaScript", "Python", "SQL", "React / Next.js", "Astro", "Vue 3", "React Native / Expo", "Node.js / NestJS", "FastAPI", "PostgreSQL / Supabase", "Neo4j", "Redis", "Cloudflare Workers, D1, R2", "Docker", "Vercel", "Shopify", "Sentry / Grafana"]
     }
   ]
 }

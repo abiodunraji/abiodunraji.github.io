@@ -13,15 +13,18 @@
       "Supabase (RLS)",
       "PostgreSQL",
       "Redis",
-      "Vercel",
-      "React Native / Expo"
+      "Vercel"
     ],
     "highlights": [
       "Whole member lifecycle, onboarding to disputes; the first real circle completed with zero defaults.",
       "Staff back-office: monitoring, role-based access, support inbox, disputes console, audit log, announcements.",
       "Also an agreement step, receipts and host succession; that first circle had 7 members on daily rounds.",
-      "Closed a 25-alert security pass, and self-hosted the font so the ₦ sign and Yoruba characters render correctly."
+      "Closed a 25-alert security pass, and self-hosted the font so the ₦ sign and Yoruba characters render correctly.",
+      "First version: a React Native (Expo) mobile client, not released to the stores."
     ],
+    "cvShow": [0, 1, 3],
+    "proof": { "0": "7 members · 0 defaults", "3": "25 alerts closed" },
+    "cvStackNote": "first version in React Native / Expo",
     "url": "https://ajoko.ng",
     "confidential": false
   },
@@ -48,6 +51,8 @@
       "GPS-first upload with map-pin fallback, Serwist PWA, Sentry; a failing Playwright test before every feature.",
       "Admin activity feed, push and email engagement, and ongoing security hardening."
     ],
+    "cvShow": [0, 1],
+    "proof": { "1": "43 Playwright tests" },
     "url": "https://marcplaats.com",
     "confidential": false
   },
@@ -72,6 +77,8 @@
       "Verified its Google Business Profile; homepage indexed and 774 pages discovered in Search Console.",
       "Brand redesign with colours sampled from the shop's own signage, plus a share card for links."
     ],
+    "cvShow": [0],
+    "proof": { "0": "733 products", "1": "774 pages found" },
     "url": "private",
     "confidential": false,
     "consentPending": true
@@ -99,6 +106,8 @@
       "Per-route SEO tags, sitemap and robots fixed; dependency and security patches; a Node 22 deploy pipeline on GitHub Pages.",
       "A copy-paste 'add a project' workflow so the client can publish new work."
     ],
+    "cvShow": [1],
+    "proof": { "1": "61 → 8.5 MB" },
     "url": "https://houseoffaridah.com",
     "confidential": false
   }

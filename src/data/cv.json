@@ -2,10 +2,20 @@
   "brand": "Biodun Raji",
   "fullName": "Abiodun Osagie-Raji",
   "knownAs": "Biodun",
-  "title": "Full-stack Engineer",
+  "title": "Full Stack Software Engineer",
   "tagline": "I build whole systems, end to end — web, mobile, AI agents and the operations around them — in whatever stack the problem needs.",
   "location": "Lagos, Nigeria",
   "summary": "Full-stack engineer who builds the whole system a problem needs, in whatever stack it needs. Mostly that is software: web and mobile products, APIs and data models, payments, back-office consoles, and AI agents that do real work behind safety gates written in code. Around it sits the operation: search and AI visibility, store and CMS work, monitoring and process. I run an independent studio for clients in Nigeria and the Netherlands; in 2026 that meant a 733-product retail storefront and Dutch site, store and search work, alongside a live savings-circle product. In tech since 2010.",
+  "cvSummary": "Full-stack engineer who builds the whole system a problem needs: web and mobile products, APIs and data models, back-office consoles, and AI agents that do real work behind safety gates written in code. I run an independent studio for clients in Nigeria and the Netherlands.",
+  "cvAvailable": "Open to senior and leadership roles in engineering, architecture, platform, data and AI. Based in Lagos: on-site or remote, worldwide.",
+  "cvSignature": "Every figure on this page can be checked. Ask me for the source.",
+  "cvTagline": "",
+  "receipts": [
+    { "value": "0", "unit": "defaults", "label": "Ajoko’s first live circle, 7 members" },
+    { "value": "61→8.5", "unit": "MB", "label": "image weight cut on a live site" },
+    { "value": "733", "unit": "products", "label": "WhatsApp-first Lagos store" },
+    { "value": "2010", "unit": "", "label": "shipping software since" }
+  ],
   "available": "Taking on studio projects; open to senior and leadership roles in engineering, architecture, platform, data and AI, security and product, in any stack, and to operations, strategy, transformation and delivery work wherever a system can solve the problem. Based in Lagos: on-site or remote, worldwide.",
   "studio": {
     "headline": "I build and ship your product — fast, and built to last.",
@@ -28,11 +38,13 @@
     {
       "name": "Diploma — Folu Computer Institute",
       "detail": "Formal computing diploma that launched a tech career; in the industry ever since — in-house roles at several businesses, then full-time freelance, project-based engineering.",
+      "cvDetail": "In the industry ever since: in-house roles at several businesses, then full-time freelance, project-based engineering.",
       "year": "2007–2010"
     },
     {
       "name": "Self-taught, production-first",
       "detail": "Modern stack (TypeScript, React/Next.js, Node/NestJS, Python/FastAPI, Postgres/Supabase, Docker, CI/CD, Playwright e2e) learned by shipping real products — see Selected projects.",
+      "cvHideDetail": true,
       "year": "2010–present"
     }
   ],
@@ -47,6 +59,7 @@
     },
     {
       "group": "AI & agents",
+      "cvWide": true,
       "items": ["Multi-agent pipelines", "Agents behind coded safety gates", "LLM features", "AI-search visibility"]
     },
     {

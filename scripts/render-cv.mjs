@@ -30,6 +30,8 @@ const out = outArg.startsWith('public/') ? outArg : `public/${outArg}`;
 const browser = await chromium.launch();
 const page = await browser.newPage();
 await page.goto(`http://localhost:4399${route}`, { waitUntil: 'networkidle' });
+// Print only once every web font has loaded, or the PDF embeds a fallback face.
+await page.evaluate(() => document.fonts.ready);
 await page.pdf({
   path: out,
   format: 'A4',

@@ -38,6 +38,7 @@
     "featured": true,
     "stack": [
       "Next.js 15",
+      "TypeScript",
       "Supabase",
       "PostgreSQL",
       "Leaflet / Mapbox",

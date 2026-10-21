@@ -12,6 +12,8 @@
       "React",
       "Supabase (RLS)",
       "PostgreSQL",
+      "Playwright",
+      "WhatsApp Cloud API",
       "Vercel"
     ],
     "highlights": [
@@ -19,10 +21,13 @@
       "Staff back-office: monitoring, role-based access, support inbox, disputes console, audit log, announcements.",
       "Also an agreement step, receipts and host succession; that first circle had 7 members on daily rounds.",
       "Closed a 25-alert security pass, and self-hosted the font so the ₦ sign and Yoruba characters render correctly.",
-      "First version: a React Native (Expo) mobile client, not released to the stores."
+      "First version: a React Native (Expo) mobile client, not released to the stores.",
+      "WhatsApp login (Meta Cloud API): a member proves their phone by sending a one-time code; webhooks are signature-checked.",
+      "Money rules in PostgreSQL: a host fee owed when a member collects, cash recorded by that turn's collector, and dispute evidence only the people involved can open.",
+      "Built test-first: the failing test lands before each change; 200 end-to-end Playwright tests run on every PR."
     ],
-    "cvShow": [0, 1, 3],
-    "proof": { "0": "7 members · 0 defaults", "3": "25 alerts closed" },
+    "cvShow": [0, 7, 5],
+    "proof": { "0": "7 members · 0 defaults", "3": "25 alerts closed", "7": "200 end-to-end tests" },
     "cvStackNote": "first version in React Native / Expo",
     "url": "https://ajoko.ng",
     "confidential": false
